@@ -4,96 +4,24 @@ angular.module('app')
   .controller('MainCtrl', function ($scope, $interval, stackedAreaChartSampleData, pieChartSampleData, RandomTimeSeriesDataModel, RandomTopNDataModel) {
     var widgetDefinitions = [
       {
-        name: 'wt-time',
-        style: {
-          width: '33%'
-        }
-      },
-      {
-        name: 'wt-random',
-        style: {
-          width: '33%'
-        }
-      },
-      {
-        name: 'wt-scope-watch',
-        attrs: {
-          value: 'randomValue'
-        },
-        style: {
-          width: '34%'
-        }
-      },
-      {
-        name: 'wt-line-chart',
-        dataAttrName: 'chart',
-        dataModelType: RandomTimeSeriesDataModel,
-        style: {
-          width: '50%'
-        }
-      },
-      {
-        name: 'wt-gauge',
-        attrs: {
-          value: 'percentage'
-        },
-        style: {
-          width: '250px'
-        }
-      },
-      {
-        name: 'wt-top-n',
-        dataAttrName: 'data',
-        dataModelType: RandomTopNDataModel,
-        style: {
-          width: '30%'
-        }
-      },
-      {
-        name: 'progressbar',
-        attrs: {
-          class: 'progress-striped',
-          type: 'success',
-          value: 'percentage'
-        },
-        style: {
-          width: '30%'
-        }
-      },
-      {
-        name: 'progressbar2',
+        title: 'SARASA',
+        name: 'sarasa',
         template: '<div progressbar class="progress-striped" type="info" value="percentage">{{percentage}}%</div>',
         style: {
-          width: '30%'
-        }
-      },
-      {
-        name: 'nvd3-stacked-area-chart',
-        attrs: {
-          data: 'stackedAreaChartData',
-          height: '400',
-          showXAxis: 'true',
-          showYAxis: 'true',
-          xAxisTickFormat: 'xAxisTickFormat()'
-        },
-        style: {
           width: '50%'
         }
       },
       {
-        name: 'URLtemplate',
-        templateUrl: 'template/percentage.html'
+        title: 'Balanza',
+        templateUrl: 'template/fountains.html',
+        style: {
+        	width: '50%'
+        }
       },
       {
-        name: 'wt-pie-chart',
-        style: {
-          width: '350px',
-          height: '350px'
-        },
-        attrs: {
-          data: 'pieChartData'
+          name: 'MyWidget',
+          template: '<div>Hola</div>'
         }
-      }
     ];
 
 
